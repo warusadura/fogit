@@ -2,7 +2,7 @@
 
 CC = gcc
 CFLAGS = -Wall -g -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-LIBFLAGS = -lglib-2.0
+LIBFLAGS = -lglib-2.0 -lreadline
 TARGET = build/fogit
 TEST_TARGET = build/fogit_test
 OBJECTFILES = src/main.o
