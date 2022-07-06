@@ -2,11 +2,11 @@
 
 CC = gcc
 CFLAGS = -Wall -g -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-LIBFLAGS = -lglib-2.0 -lreadline
+LIBFLAGS = -lglib-2.0 -lreadline -lsqlite3
 TARGET = build/fogit
 TEST_TARGET = build/fogit_test
-OBJECTFILES = src/main.o
-TEST_OBJECTFILES = test/main.o
+OBJECTFILES = src/main.o src/fogit.o
+TEST_OBJECTFILES = test/main.o src/fogit.o
 
 
 main: $(TARGET)
