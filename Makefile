@@ -7,6 +7,7 @@ TARGET = build/fogit
 TEST_TARGET = build/fogit_test
 OBJECTFILES = src/main.o src/fogit.o
 TEST_OBJECTFILES = test/main.o src/fogit.o
+CONF_DIR = .conf
 
 
 main: $(TARGET)
@@ -21,3 +22,4 @@ $(TEST_TARGET): $(TEST_OBJECTFILES)
 
 clean:
 	rm -f $(OBJECTFILES) $(TARGET) $(TEST_OBJECTFILES) $(TEST_TARGET) *~
+	rm -rf $(CONF_DIR)
